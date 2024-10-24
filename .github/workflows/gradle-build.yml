@@ -11,3 +11,9 @@ jobs:
           java-version: 1.8
       - name: 构建
         run: ./gradlew build
+      - name: 上传构建工件
+        uses: actions/upload-artifact@v3
+        with:
+         name: app-debug
+         path: app/build/outputs/
+
